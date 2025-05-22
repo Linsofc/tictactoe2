@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 40px;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.square {
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin: 2px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.square:nth-of-type(even){
+  background-color: #444;
+  color: #fff;
+}
+
+.square:hover {
+  background: #e1e8f0;
+  transform: scale(1.05);
+}
+
+.square:nth-last-of-type(even):hover{
+  background: #2f2f30;
+  transform: scale(1.05);
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+button.jumpList {
+  padding: 10px 20px;
+  margin: 5px auto;
+  background-color: #4f46e5; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.jumpList:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+button.jumpList:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+button.jumpList:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
+}
+
+li.linya {
+  list-style: none;
+}
+
+.status {
+  margin: 20px 0;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937; 
+  background-color: #e0f2fe; 
+  border-left: 6px solid #3b82f6; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.status.next {
+  background-color: #e0f2fe; 
+  color: #1d4ed8;            
+  border-left: 6px solid #3b82f6; 
+}
+
+.status.win {
+  background-color: #dcfce7; 
+  color: #15803d;         
+  border-left: 6px solid #22c55e; 
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
